@@ -1,0 +1,114 @@
+@media (max-width: 2000px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceBox {
+    max-width: 90%;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .education-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .awards-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .seminar-columns{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+}
+
+@media (max-width: 1400px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .serviceBox {
+    max-width: 90%;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .education-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .awards-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Intro,
+  .WhatIDo {
+    padding: 20px 15px;
+    font-size: 1rem;
+  }
+
+  .serviceBox {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .serviceBox i, .serviceBox svg {
+    margin: 0 0 10px 0;
+  }
+
+  .serviceContent h3 {
+    font-size: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .skills-group{
+    width: 50%;
+  }
+
+  .seminar-columns{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .awards-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+  .education-container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5%;
+  }
+
+}

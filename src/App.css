@@ -1,0 +1,939 @@
+/* Base styles remain the same */
+@font-face {
+  font-family: 'Inter';
+  src: url('../src/assets/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../src/assets/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(10, 42, 42, 0.8) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(5, 26, 26, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse at 60% 80%, rgba(10, 21, 21, 0.7) 0%, transparent 55%),
+    radial-gradient(ellipse at 30% 70%, rgba(15, 30, 30, 0.5) 0%, transparent 65%),
+    radial-gradient(ellipse at 90% 90%, rgba(8, 35, 35, 0.4) 0%, transparent 45%),
+    #0a0a0a;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.LandingPage {
+  display: flex; 
+  margin: 2rem;
+  width: 1200px;           
+  min-width: 300px;       
+  max-width: 1400px;       
+  height: 90vh;
+  min-height: 600px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(34, 34, 34, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Profile {
+  width: 28%;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  padding: 2rem;
+  text-align: center;
+  margin: 0.5rem;
+  border-radius: 16px;
+  color: #fff;
+  position: relative;
+  border: 1px solid rgba(29, 205, 159, 0.2);
+  transition: all 0.3s ease;
+}
+
+.Profile .JobTitle {
+  background: linear-gradient(135deg, rgba(29, 205, 159, 0.15), rgba(32, 227, 178, 0.1));
+  border: 1px solid rgba(29, 205, 159, 0.3);
+  border-radius: 12px;
+  padding: .5rem;
+  margin: 1.5rem 0;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 8px 32px rgba(29, 205, 159, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.Profile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, transparent, rgba(29, 205, 159, 0.05));
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.Profile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(29, 205, 159, 0.15);
+}
+
+.Profile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem auto 1.5rem;
+  display: block;
+  box-shadow: 
+    0 0 30px 8px rgba(29, 205, 159, 0.4),
+    0 0 60px 15px rgba(29, 205, 159, 0.2);
+  transition: all 0.4s ease;
+  border: 3px solid rgba(29, 205, 159, 0.3);
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.Profile img:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 40px 12px rgba(29, 205, 159, 0.6),
+    0 0 80px 20px rgba(29, 205, 159, 0.3);
+}
+
+.Profile h1 {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1DCD9F, #20E3B2);
+  -webkit-background-clip: text;
+  color: #ffffff;
+  background-clip: text;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.Profile h3 {
+  margin: 0.8rem 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px; 
+  margin-left: -20px;
+  gap: 10px; 
+  font-size: 0.95rem;
+  color: white; 
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.contact-info i {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px; 
+  justify-content: center; 
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  color: white; 
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  color: #20E3B2; 
+  box-shadow: 
+    inset 0 0 20px rgba(29, 205, 159, 0.1),
+    0 0 20px rgba(29, 205, 159, 0.2);
+}
+
+.Profile h4 {
+  margin-top: 4rem;
+  color: #1DCD9F;
+  font-weight: 700;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.icon-wrapper {
+  background-color: #686868;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #333;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.text-content {
+  text-align: left;
+  margin-left: 12px;
+}
+
+.text-content span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 3px;
+  color: #838383;
+}
+
+.text-content p {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 3px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Pages {
+  width: 72%;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.Pages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, transparent, rgba(29, 205, 159, 0.02));
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+.PageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(29, 205, 159, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.PageTitle {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1DCD9F, #20E3B2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Navbar styling */
+.Navbar {
+  align-self: flex-end;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 0.5rem;
+  border: 1px solid rgba(29, 205, 159, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.Navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(29, 205, 159, 0.05), transparent, rgba(29, 205, 159, 0.05));
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.Navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.25rem;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.Navbar li {
+  display: inline;
+  position: relative;
+}
+
+.Navbar button {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(255, 255, 255, 0.7);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.Navbar button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(29, 205, 159, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.Navbar button:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+.Navbar button:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.Navbar button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1DCD9F, transparent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.Navbar button:hover::after {
+  width: 80%;
+}
+
+.NavbarButton.active {
+  color: #1DCD9F;
+  background: rgba(29, 205, 159, 0.1);
+  box-shadow: 
+    inset 0 0 20px rgba(29, 205, 159, 0.1),
+    0 0 20px rgba(29, 205, 159, 0.2);
+}
+
+.NavbarButton.active::before {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(29, 205, 159, 0.2) 0%, transparent 70%);
+}
+
+.NavbarButton.active::after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #1DCD9F, #20E3B2, #1DCD9F, transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.NavbarButton.active:hover {
+  color: #20E3B2;
+  background: rgba(29, 205, 159, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Content area */
+.Content {
+  margin-top: 0;
+  padding: 1.5rem;
+  background: rgba(34, 34, 34, 0.3);
+  border: 1px solid rgba(29, 205, 159, 0.1);
+  border-radius: 12px;
+  flex-grow: 1;
+  color: rgba(255, 255, 255, 0.9);
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.Content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.Content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #1DCD9F, #20E3B2);
+  border-radius: 4px;
+}
+
+.Content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #20E3B2, #1DCD9F);
+}
+
+.Content h2 {
+  margin-top: 0;
+  color: #1DCD9F;
+  font-weight: 600;
+}
+
+.Content p {
+  margin: 0.8rem 0;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   ================================ */
+
+@media (min-width: 1400px) {
+
+  .Profile {
+    padding: 2.5rem;
+  }
+  
+  .Pages {
+    padding: 2.5rem;
+  }
+
+  .text-content p{
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 1399px) {
+  .LandingPage {
+    width: 95%;
+    max-width: 1200px;
+  }
+  .icon-wrapper{
+    width: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  body {
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+  
+  .LandingPage {
+    width: 95%;
+    max-width: 1000px;
+    min-height: auto;
+    height: auto;
+    margin: 1rem;
+  }
+  
+  .Profile {
+    width: 35%;
+    padding: 1.5rem;
+  }
+  
+  .Pages {
+    width: 65%;
+    padding: 1.5rem;
+  }
+  
+  .PageTitle {
+    font-size: 2.2rem;
+  }
+  
+  .Profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contact-info{
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .LandingPage {
+    flex-direction: column;
+    width: 95%;
+    max-width: 700px;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .Profile {
+    width: 98%;
+    margin-bottom: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .Profile .JobTitle {
+    margin-bottom: 2rem;
+  }
+  
+  .Profile h4 {
+    margin-top: 2rem;
+  }
+  
+  .Pages {
+    width: 98%;
+    margin-top: 0;
+    border-radius: 0 0 16px 16px;
+    flex-grow: 1;
+  }
+  
+  .PageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .PageTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .Navbar {
+    align-self: stretch;
+    width: 100%;
+  }
+  
+  .Navbar ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .Navbar button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+    flex: 1;
+    min-width: 80px;
+  }
+  .icon-wrapper{
+    width: 40px;
+  }
+
+  .contact-info{
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0.5rem 0;
+  }
+  
+  .LandingPage {
+    width: 98%;
+    margin: 0.5rem;
+    border-radius: 16px;
+  }
+  
+  .Profile {
+    padding: 1.5rem 1rem;
+  }
+  
+  .Profile h1 {
+    font-size: 1.5rem;
+  }
+  
+  .Profile h3 {
+    font-size: 0.9rem;
+  }
+  
+  .Profile img {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .contact-info {
+    font-size: 0.60rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon-wrapper {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .text-content span {
+    font-size: 10px;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    gap: 12px;
+  }
+  
+  .social-icon {
+    font-size: 1.3rem;
+  }
+  
+  .Pages {
+    padding: 1rem;
+  }
+  
+  .PageTitle {
+    font-size: 1.8rem;
+  }
+  
+  .Content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .Navbar button {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+    min-width: 70px;
+  }
+}
+
+/* Mobile Medium (375px to 479px) */
+@media (max-width: 479px) {
+  .LandingPage {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100vh;
+  }
+  
+  .Profile {
+    border-radius: 0;
+    padding: 1rem;
+  }
+  
+  .Profile h1 {
+    font-size: 1.4rem;
+  }
+  
+  .Profile h3 {
+    font-size: 0.85rem;
+  }
+  
+  .Profile img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .Profile .JobTitle {
+    padding: 0.4rem;
+    margin: 1rem 0 2rem;
+  }
+  
+  .contact-info {
+    font-size: 0.6rem;
+    gap: 8px;
+  }
+  
+  .icon-wrapper {
+    /* width: 32px; */
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .text-content span {
+    font-size: 9px;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+  }
+  
+  .Pages {
+    border-radius: 0;
+    padding: 0.8rem;
+  }
+  
+  .PageTitle {
+    font-size: 1.6rem;
+  }
+  
+  .Content {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .Navbar ul {
+    gap: 0.3rem;
+  }
+  
+  .Navbar button {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 374px) {
+  .Profile h1 {
+    font-size: 1.2rem;
+  }
+  
+  .Profile h3 {
+    font-size: 0.8rem;
+  }
+  
+  .Profile img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .contact-info {
+    font-size: 0.6rem;
+  }
+  
+  .text-content span {
+    font-size: 8px;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+  }
+  
+  .PageTitle {
+    font-size: 1.4rem;
+  }
+  
+  .Navbar button {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.65rem;
+    min-width: 50px;
+  }
+  
+  .Content {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .LandingPage {
+    flex-direction: row;
+    height: 100vh;
+  }
+  
+  .Profile {
+    width: 40%;
+    border-radius: 16px 0 0 16px;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .Profile img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .Profile h1 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .Profile h3 {
+    font-size: 0.8rem;
+  }
+  
+  .Profile .JobTitle {
+    margin: 1rem 0;
+    padding: 0.3rem;
+  }
+  
+  .Profile h4 {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-info {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .icon-wrapper {
+    /* width: 28px; */
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .text-content span {
+    font-size: 7px;
+  }
+  
+  .text-content p {
+    font-size: 8px;
+  }
+  
+  .social-icons {
+    gap: 8px;
+  }
+  
+  .social-icon {
+    font-size: 1rem;
+  }
+  
+  .Pages {
+    width: 60%;
+    border-radius: 0 16px 16px 0;
+    padding: 1rem;
+  }
+  
+  .PageHeader {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .PageTitle {
+    font-size: 1.4rem;
+  }
+  
+  .Navbar {
+    align-self: flex-end;
+  }
+  
+  .Navbar ul {
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+  
+  .Navbar button {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.6rem;
+    min-width: 45px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .Profile img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility - Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .LandingPage {
+    animation: none;
+  }
+  
+  .Profile img,
+  .Profile h1,
+  .Profile h3,
+  .contact-info,
+  .social-icon,
+  .Profile h4,
+  .icon-wrapper {
+    animation: none;
+  }
+  
+  .PageTitle {
+    animation: none;
+  }
+}
