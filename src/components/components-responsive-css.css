@@ -27,6 +27,55 @@
     margin: 5%;
   }
 
+  .categories {
+    max-width: 1400px;
+    gap: 2.5rem;
+  }
+  
+  .category {
+    padding: 2.5rem;
+    border-radius: 24px;
+  }
+  
+  .category h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+  }
+  
+  .portfolio-list {
+    gap: 1.5rem;
+  }
+  
+  .item-button {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .item-details {
+    padding: 2.5rem;
+  }
+  
+  .item-details img {
+    max-width: 450px;
+    height: 250px;
+  }
+  
+  .item-details p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-left: 2rem;
+  }
+  
+  .button {
+    padding: 2.5rem;
+  }
+  
+  .button a {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
 }
 
 @media (max-width: 1400px) {
@@ -51,6 +100,64 @@
   .awards-container{
     grid-template-columns: repeat(2, 1fr);
     margin: 5%;
+  }
+
+  .categories {
+    max-width: 1000px;
+    gap: 1.75rem;
+    padding: 0 1rem;
+  }
+  
+  .category {
+    padding: 1.75rem;
+    border-radius: 16px;
+  }
+  
+  .category h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.6rem;
+  }
+  
+  .portfolio-list {
+    gap: 0.875rem;
+  }
+  
+  .item-button {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+  
+  .item-details {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .item-details img {
+    max-width: 350px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+  
+  .item-details p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-left: 0;
+    text-align: justify;
+    text-indent: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .button {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .button a {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
   }
 
 }
@@ -82,6 +189,133 @@
 
   .sectionTitle {
     font-size: 22px;
+  }
+
+  .awards-container {
+    min-width: 190px;
+    gap: 10px;
+    margin-left: 15px;
+  }
+
+  .skills-container {
+    gap: 10px;
+    margin-left: 15px;
+  }
+
+  .skills-group h3{
+    font-size: 1rem;
+  }
+
+  .categories {
+    max-width: 100%;
+    gap: 1.25rem;
+    padding: 0 0.75rem;
+  }
+  
+  .category {
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin: 0 0.25rem;
+  }
+  
+  .category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .portfolio-list {
+    gap: 0.75rem;
+  }
+  
+  .portfolio-item {
+    border-radius: 8px;
+  }
+  
+  .portfolio-item:hover {
+    transform: none;
+    box-shadow: 0 5px 15px rgba(29, 205, 159, 0.1);
+  }
+  
+  .item-button {
+    padding: 1rem;
+    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .item-button span {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    
+  }
+  
+  .item-details {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .item-details img {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .item-details p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-left: 0;
+    text-align: justify;
+    text-indent: 1rem;
+    max-width: 100%;
+  }
+  
+  .button {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .button a {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  /* Touch-friendly adjustments for mobile */
+  .item-button {
+    min-height: 60px;
+    touch-action: manipulation;
+  }
+  
+  .button a {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* Remove hover effects on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    .portfolio-item:hover {
+      transform: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .item-button:hover {
+      color: #ffffff;
+    }
+    
+    .button a:hover {
+      box-shadow: 
+        0 4px 15px rgba(74, 222, 128, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
