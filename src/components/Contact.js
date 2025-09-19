@@ -63,7 +63,7 @@ function Contact() {
             <i className="fab fa-facebook-f"></i>
             Facebook
           </h3>
-          <p>marc Joseph Andaya</p>
+          <p>Marc Joseph Andaya</p>
           {copied === "Facebook" && <span className="copied-msg">Clicked!</span>}
         </div>
 
