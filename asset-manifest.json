@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marc-joseph-andaya-portfolio/static/css/main.597ec2fb.css",
-    "main.js": "/marc-joseph-andaya-portfolio/static/js/main.6468eec7.js",
+    "main.js": "/marc-joseph-andaya-portfolio/static/js/main.ef9adeee.js",
     "static/js/453.05acf6ad.chunk.js": "/marc-joseph-andaya-portfolio/static/js/453.05acf6ad.chunk.js",
     "static/media/Payaso.pdf": "/marc-joseph-andaya-portfolio/static/media/Payaso.44475dc98d59e8fb737c.pdf",
     "static/media/Newsletter The Spring.pdf": "/marc-joseph-andaya-portfolio/static/media/Newsletter The Spring.bcaf84c6538afa9472e6.pdf",
@@ -52,11 +52,11 @@
     "static/media/fa-v4compatibility.woff2": "/marc-joseph-andaya-portfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/marc-joseph-andaya-portfolio/index.html",
     "main.597ec2fb.css.map": "/marc-joseph-andaya-portfolio/static/css/main.597ec2fb.css.map",
-    "main.6468eec7.js.map": "/marc-joseph-andaya-portfolio/static/js/main.6468eec7.js.map",
+    "main.ef9adeee.js.map": "/marc-joseph-andaya-portfolio/static/js/main.ef9adeee.js.map",
     "453.05acf6ad.chunk.js.map": "/marc-joseph-andaya-portfolio/static/js/453.05acf6ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.597ec2fb.css",
-    "static/js/main.6468eec7.js"
+    "static/js/main.ef9adeee.js"
   ]
 }
