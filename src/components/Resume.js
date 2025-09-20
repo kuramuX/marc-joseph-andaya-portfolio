@@ -260,7 +260,7 @@ function Resume() {
               className="seminar-card"
             >
               <p>
-                <span className="seminar-title">Advancing on Op en RAN in Asia (AI Ethics and Governance)</span>
+                <span className="seminar-title">Advancing on Open RAN in Asia (AI Ethics and Governance)</span>
                 <br></br>
                 <span className="seminar-meta">October 2024</span>
               </p>
