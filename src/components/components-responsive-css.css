@@ -299,6 +299,26 @@
     min-height: 44px;
     touch-action: manipulation;
   }
+
+  .skills-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+  }
+
+  .seminar-columns{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+  }
+
+  .awards-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+  }
+
+  .education-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 5%;
+  }
   
   /* Remove hover effects on touch devices */
   @media (hover: none) and (pointer: coarse) {
